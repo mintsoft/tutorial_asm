@@ -18,9 +18,7 @@ loop1:
 	int 80h
 
 	mov eax, [num]	; shove the var into eax so we can do addition etc
-	sub eax, '0'	;usual contrived ascii wank
 	inc eax		; increment eax in-place
-	add eax, '0'	; usual contrived ascii wank
 
 	pop ecx		; OK so we're about to loop, that means we need our ecx value back, this pops it off the stack back into the ecx reg
 	loop loop1	; this assume that ecx contains the loop count, it decrements the register when looping until it's 0
