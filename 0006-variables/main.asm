@@ -1,8 +1,8 @@
 section .text
 	global _start
 _start:
-	mov edx,1
-	mov ecx,choice
+	mov edx,9	;length of string
+	mov ecx,string
 	mov ebx,1,
 	mov eax,4
 	int 80h
@@ -11,4 +11,4 @@ _start:
 	mov ebx,0
 	int 80h
 section .data
-choice db 'y'
+string times 9 db '*'
