@@ -10,7 +10,6 @@ loop1:
 	mov [num], eax
 
 	push ecx	;we want ecx for the loop, but we need that register to output to the screen, so we can push it onto the stack for now
-
 	mov eax, 4	; sys_write
 	mov ebx, 1	;stdout
 	mov ecx, num	;the variable
