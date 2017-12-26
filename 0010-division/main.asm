@@ -5,7 +5,7 @@ _start:
 	mov bl, 2
 
 	div bl	;divides ax by bl in-place
-	add ax, '0'	;convert back to ascii!
+	add eax, '0'	;convert back to ascii!
 
 	mov [result], ax
 
