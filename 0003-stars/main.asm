@@ -22,8 +22,9 @@ _start:		;main function equiv
 	mov eax,4
 	int 0x80
 
-	mov	eax,1	;sys_ext
-	int	0x80
+	mov eax,1	;exit ()
+	mov ebx,0	; the actual exit code
+	int 0x80
 
 section .data
 msg db 'Displaying 9 stars',0xa	; a message - 0xa is NEW LINE!!!
