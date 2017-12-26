@@ -1,15 +1,12 @@
 section .text
 	global _start
 _start:
-	mov al, '3'
-	sub al,'0'
-
-	mov bl,'2'
-	sub bl, '0'
+	mov al,3
+	mov bl,2
 
 	mul bl	;this multiplies the value of al by the value in bl (in-place)
 
-	add al,'0'	;convert back to binary
+	add al,'0'	;convert back to ascii
 
 	mov [result], al 	;store result for later
 
