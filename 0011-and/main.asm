@@ -2,8 +2,8 @@ section .text
    global _start            ;must be declared for using gcc
 	
 _start:           
-	mov ax,8
-	and ax,1	;BAND ax with 1 (this will result in 0)
+	mov eax,8
+	and eax,1	;BAND ax with 1 (this will result in 0)
 	jz  even	; jump to label evnn IF ax is 0
 	
 	mov eax,4	;sys_write
