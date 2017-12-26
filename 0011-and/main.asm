@@ -4,7 +4,7 @@ section .text
 _start:           
 	mov eax,8
 	and eax,1	;BAND ax with 1 (this will result in 0)
-	jz  even	; jump to label evnn IF ax is 0
+	jz  even	; jump to label even IF *something* is 0; whatever that is
 	
 	mov eax,4	;sys_write
 	mov ebx,1	;stdout
