@@ -20,9 +20,8 @@ next:
 
 	pop ecx		; get our ecx back
 
-	mov dx, [achar]
-	cmp byte [achar], 0dh
 	inc byte [achar]
+
 	loop next	;this looks at the value of ecx!
 ret
 
