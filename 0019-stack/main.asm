@@ -23,7 +23,7 @@ next:
 	mov dx, [achar]
 	cmp byte [achar], 0dh
 	inc byte [achar]
-	loop next
+	loop next	;this looks at the value of ecx!
 ret
 
 section .data
