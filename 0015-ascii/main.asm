@@ -5,9 +5,7 @@ _start:
 	sub ah, ah	; 0-out ah?
 	mov al, '9'	; shove ASCII 9 in al
 	sub al, '3'	; subtract ASCII 3 from ASCII 9 (leaving actual 6)
-
-	AAS		; does seomthing ....
-
+	aas		; according to the internet this should only be needed when AL contains a two-BCD-digit byte result
 	or al, 0x30	; does a BOR on 0x30 (which is '0')
 	mov [result], ax	; I presume ax is the output of the above or
 
