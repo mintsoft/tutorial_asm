@@ -29,9 +29,5 @@ display:
 
 section .data
 global x
-x:
-	db 2
-	db 4
-	db 3
-sum:
-	db 0
+x db 2,4,3
+sum db 0
