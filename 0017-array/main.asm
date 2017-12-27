@@ -11,7 +11,7 @@ top:
 	add ebx, [ecx]
 	add ecx,1
 	dec eax
-	jnz top	;if ecx not zero then jump to top
+	jnz top	; this actually works by looing for ZF=0 (zero flag) which is set by dec, not the ecx register
 
 done:
 	add ebx,'0' ;to ascii
