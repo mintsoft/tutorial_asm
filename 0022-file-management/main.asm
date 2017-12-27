@@ -20,10 +20,10 @@ int 80h
 mov eax,6	;sys_close
 mov ebx, [fd_out];	unsigned int file_descriptor
 
-mov eax, 4
+mov eax,4
 mov ebx,1
 mov ecx,msg_done
-mov ecx,len_done
+mov edx,len_done
 int 80h
 
 mov eax,5	;sys_open
@@ -39,7 +39,7 @@ mov [fd_in], eax	;again eax contains the file descriptor
 mov eax,3	;sys_read
 mov ebx,[fd_in]	;unsigned int file_descriptor
 mov ecx, info
-mov edx, 26
+mov edx, 37
 int 80h
 
 ;close the file
@@ -50,7 +50,7 @@ mov ebx, [fd_in]
 mov eax,4
 mov ebx,1
 mov ecx,info
-mov edx, 26
+mov edx, 37
 int 80h
 
 mov eax,1
@@ -68,5 +68,5 @@ len_done equ $-msg_done
 section .bss
 fd_out resb 1
 fd_in resb 1
-info resb 26
+info resb 37
 

@@ -28,7 +28,7 @@ proc_fact:
 	cmp bl,1	;compare to 1
 	jg	do_calculation	;jump if greater
 	mov al,1	;0 factorial is 1
-	ret		;return control
+	ret		;return control to where it was CALLED, NOT jump'd
 
 do_calculation:
 	dec	bl
