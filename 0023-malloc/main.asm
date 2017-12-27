@@ -15,7 +15,7 @@ int 80h
 cmp eax,0	;sets eax to -1 if there was an erro
 jl	exit	; if less than 
 
-mov edi, eax	;edi = highest available address
+mov edi, eax	; lets make edi = highest available address
 
 ; this gives us our starting point for the below loop
 sub edi,4	;location of the highest DWORD (4bytes)
